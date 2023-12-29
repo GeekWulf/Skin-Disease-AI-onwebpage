@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin disease detection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class = "logo">
+            <a href = " ">Skin Disease</a>
+        </div>
+
+        <ul class = "menu">
+            <li><a href = "#">Home</a></li>
+            <li><a href = "#info">Info</a></li>
+            <li><a href = "#Symptoms">Symtoms</a></li>
+            <li><a href = "#webcam">AI</a></li>
+            <li><a href = "#footer">Contact</a></li>
+        </ul>
+
+    </nav>
+    
+    <section id = "welcome-page">
+        <h2 id = "heading" style = "color: white;">Hi! Welcome to</h2>
+        <h1 id = "name" style = "color: white;">Skin Disease AI</h1>
+        <a id = "scoll-btn" href = "#content"><h6>Enter Site</h6></a>
+    </section>
+    
+    <div id = "content">
+        
+        <div id = "info">
+        <main >
+            <div>
+                <h3>What is skin disease AI</h3>
+                <p>Skin Disease AI เป็น AI ตรวจจับความผิดปกติของผิวหนังเบื้องต้นโดยใช้หลักการ image classification มีรากฐานมาจาก Teachable Machine Skin Disease AI สามารถแยกผิวหนังที่ปกติและผิดปกติได้ เพื่อให้ผู้ใช้งานทราวบว่าผิวหนังของตนเองมีความผิดปกติหรือไม่ AI ตัวนี้มีจุดประสงค์เพียงแค่เป็นผู้ช่วยตัดสินการพบแพทย์ของผู้ใช้งานเท่านั้น </p>
+            </div>
+            <div>
+                <h3>How to use</h3>
+                <p>Skin Disease AI ทำนายผลการวินิจฉัยจากภาพที่ป้อนเข้าไปดังนั้นการใช้ AI ตัวนี้ ต้องมีกล้องเพื่อตรวจจับผิวหนัง </p>
+            </div>
+            <div>
+                <h3>Medical Sugestion</h3>
+                <p>โรคผิวหนังหลายชนิดมีความหลากหลายและอาการที่แตกต่างกัน การตัดสินใจพบแพทย์เพื่อวินิจฉัยโรคและรักษาต่อไปจึงเป็นเรื่องดีที่สุด ในบางกรณีโรคผิวหนังบางชนิดอาจแสดงอาการอักเสบของผิวหนังน้อยมากจน AI ตัวนี้ไม่สามารถตรวจจับได้ แต่ถ้าหากเกิดอาการที่เข้าข่ายโรคผิวหนัง เช่น อาการคัน ก็ควรพบแพทย์ทันที</p>
+            </div>
+        </main>
+        </div>
+        
+        <h2 style = "font-size: 55px;">Common Symptoms</h2>
+        <hr id = "hr">
+        <div><p>โรคผิวหนังมีหลายอาการที่อาจเกิดขึ้นได้ แต่มีอาการอยู่ไม่กี่อาการที่พบบ่อยซึ่งมีหลักๆอยู่ดังนี้</p></div>
+        
+        <div id="Symptoms">
+            <main id = "Symptoms-btn">
+                <div>
+                    <h4>คัน</h4>
+                    <!--<img src = "imgs/s1.png" alt = "j" width = "150" height = "150"> -->
+                    <h4>คัน</h4>
+                </div>
+                <div>
+                    <h4>ผื่นแดง</h4>
+                </div>
+                <div>
+                    <h4>ผิวหนังหนา</h4>
+                </div>
+                <div>
+                    <h4>รอยคล้ำ</h4>
+                </div>
+                <div>
+                    <h4>แห้งเป็นขุย</h4>
+                </div>
+                <div>
+                    <h4>แผลพุพอง</h4>
+                </div>
+                <div>
+                    <h4>ผิวหนังบวมแดง</h4>
+                </div>
+                <div>
+                    <h4>ผิวเป็นปื้น</h4>
+                </div>
+            </main>
+        </div>
+
+        <h2 style = "font-size: 55px; ">Skin disease AI</h2>
+        <hr id = "hr">
+        
+
+        <div id = "webcam">
+            <main id = "webcam-container">
+                <div id = pre-webcam>
+                    <p style = "color: gray; margin-top: 200px;">Please click on start button to begin</p>
+                </div>
+                <div id = "predict-bar-container">
+                    <div id = "dectected-bar">
+                        <h3>DETECTED</h3>
+                        <div class = "dyn-dect-bar">
+                            <h4 id = "detc-score">0</h4>
+                        </div>
+                    </div>
+                    <div id = "undetected-bar">
+                        <h3>UNDETECTED</h3>
+                        <div class = "dyn-udect-bar">
+                            <h4 id = "udetc-score">0</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            <!-- <div id="label-container"></div> -> -->
+
+            <div id = buttons>
+                <button class = "buttonStart" onclick="init()">Start</button>
+            </div>
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+        <script src = "js/script.js"></script>
+
+        <footer id = "footer">
+            <main id = "footer-content">
+                <div id = "contact">
+                    <h2>Contacts</h2>
+                    <div id = "contact-items">
+                        <main id = "facebook">
+                            <img src = "imgs/facebook-logo.png" alt = "facebook" width = "50" height = "50">
+                            <ul>
+                                <li><a href = "https://www.facebook.com/profile.php?id=100023229934559">facebook</a></li>
+                            </ul>
+                        </main>
+                        <main id = "ig">
+                            <img src = "imgs/Youtube_logo.png" alt = "youtube" width = "50" height = "50">
+                            <ul>
+                                <li><a href = "https://www.facebook.com/profile.php?id=100023229934559">YouTube</a></li>
+                            </ul>
+                        </main>
+                        <main id = "github">
+                            <img src = "imgs/github-logo.png" alt = "github" width = "50" height = "50">
+                            <ul>
+                                <li><a href = "https://www.facebook.com/profile.php?id=100023229934559">GitHub</a></li>
+                            </ul>
+                        </main>
+                        <main id = "email">
+                            <img src = "imgs/email logo.png" alt = "email" width = "50" height = "50">
+                            <ul>
+                                <li><a href = "https://www.facebook.com/profile.php?id=100023229934559">Gmail</a></li>
+                            </ul>
+                        </main>
+                    </div>
+                </div>
+                <div id = "ref">
+                    <h4 style = "font-size: 35; color: white;">Reference</h5>
+                    <div id = "ref-container">
+                        <ul id = "disease">
+                            <li><a href = "">disease</a></li>
+                        </ul>
+                        <ul id = "ai">
+                            <li><a href = "">AI</a></li>
+                        </ul>
+                        <ul id = "dataset">
+                            <li><a href = "">dataset</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id = "endline">
+                    <hr id = "end-hr">
+                    <p>made by: teetawat thepmanee</p>
+                </div>
+            </main>
+        </footer>
+
+    </div>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,423 @@
+html,
+body {
+    font-family: 'fantasy', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    background-color: #282828;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #df4545;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav div{
+    padding-top: 10px;
+}
+
+nav ul li{
+    height: 50px;
+    padding: 15px;
+}
+
+nav ul li:hover {
+    background-color: #282828;
+    padding: 10px;
+}
+
+.logo a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+#hr {
+    margin-top: 10px;
+    border: 3px solid #f24755;
+    margin-bottom: 5px;
+}
+
+section {
+    height: 100vh;
+    position: relative;
+}
+
+h1#name {
+    padding-top: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 70px;
+}
+
+h2#heading {
+    padding-top: 15%;
+    margin: auto;;
+    text-align: center;
+    font-size: 30px;
+}
+
+#welcome-page {
+    background-color: rgb(66, 66, 66);
+    background-image: url(https://media.citizen.co.za/wp-content/uploads/2022/10/common-summer-skin-conditions.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+a#scoll-btn {
+    left: 0;
+    right: 0;
+    bottom: 6em;
+    background-color: #df4545;
+    position: absolute;
+    height: 4em;
+    width: 10em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#scoll-btn h6 {
+    color: white;
+    padding-top: 20px;
+}
+
+#scoll-btn:hover {
+    background-color: #282828;
+    transition: transform 250ms;
+    transform: translateY(-10px);
+}
+
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    height: 1300px;
+    display: block;
+    justify-content: center;
+    background-color: #282828;
+
+}
+
+#content h2{
+    padding-top: 80px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+#content p{
+    font-size: 25px;
+    padding-top: 30px;
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+}
+
+
+#info {
+    padding-top: 80px;
+}
+
+#info main div {
+    margin-left: 15px;
+    background-color: #282828;
+    padding: 30px;
+}
+
+#info main div:hover {
+    box-shadow: 0 0 15px #f24755;
+    background-color: #f24755;
+}
+
+#info main div h3 {
+    font-size: 40px;
+    color: white;;
+}
+
+
+
+#Symptoms main {
+    padding-top: 100px;
+}
+
+#Symptoms main div{
+    background-color: #282828;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#Symptoms-btn {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+}
+
+#Symptoms-btn div:hover{
+    box-shadow: 0 0 15px #f24755;
+    background-color: #f24755;
+    animation-name: slideToTop;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
+
+}
+
+#Symptoms-btn div {
+    border-radius: 5px;
+}
+
+#Symptoms div:hover{
+    background-color: #f24755;
+}
+
+#Symptoms h4 {
+    color: white;
+    font-size: 25px;
+}
+
+@keyframes slideToTop {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+#pre-webcam{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+}
+
+#webcam-container {
+    background-color: #df4545;
+    margin-top: 100px;
+    justify-content: space-between;
+    margin-left: 30px;
+    width: 95%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#predict-bar-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 5px;
+    height: 500px;
+    width: 700px;
+}
+
+#dectected-bar {
+    margin-top: 90px;
+    margin-left: 20px;
+    background-color: #282828;
+    width: 320px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+#predict-bar-container h4 {
+    padding-top: 45px;
+    text-align: center;
+    color: aliceblue;
+    font-size: 100px;
+}
+
+#dectected-bar h3 {
+    color: white;
+    padding-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.dyn-dect-bar {
+    margin: auto;;
+    width: 300px;
+    height: 240px;
+}
+
+#undetected-bar{
+    margin-top: 90px;
+    margin-left: 10px;
+    background-color: #282828;
+    width: 320px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+#undetected-bar h3 {
+    color: white;
+    padding-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.dyn-udect-bar {
+    margin: auto;
+    width: 300px;
+    height: 240px;
+}
+
+
+
+#webcam {
+    padding-top: 20px;
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#label-container {
+    margin-left: 30px;
+}
+
+#buttons button{
+    background-color: #df4545; /* Green */
+    color: white;
+    border: none;
+    padding: 5px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#buttons button:hover {
+    background-color: #282828;
+}
+
+.buttonStart {
+    margin-top: 40px;
+    position: relative;
+    margin-left: 30px;
+    padding: 20px;
+}
+
+.buttonStop {
+    position: relative;
+    margin-left: 30px;
+    padding: 20px;
+}
+
+#footer {
+    background-color: #df4545;
+    margin-top: 300px;
+    padding-left: 350px;
+    margin-left: -400px;
+    margin-right: -400px;
+
+}
+
+#footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1400px;
+    height: 650px;
+    position: relative;
+}
+
+#contact {
+    margin-left: 200px;
+    height: 400px;
+    width: 300px;
+}
+
+#contact-items{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+}
+
+#contact-items ul{
+    margin-top: 15px;
+    margin-left: -20px;
+    list-style: none;
+}
+
+#contact-items a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #282828;
+}
+
+#ref {
+    margin-left: -50px;
+    margin-top: 100px;
+    width: 300px;
+    height: 400px;
+
+}
+
+#ref-container {
+    margin-top: 15px;
+    height: 300px;
+
+}
+
+#ref-container ul{
+    padding-top: 10px;
+    list-style: none;
+}
+
+
+#ref-container ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #282828;
+}
+
+#endline {
+    margin-left: 350px;
+
+    width: 700px;
+}
+
+#endline p {
+    font-size: 10px;
+    margin-top: -25px;
+    text-align: center;
+}
+
+#end-hr {
+    margin-top: 100px;
+
+}
