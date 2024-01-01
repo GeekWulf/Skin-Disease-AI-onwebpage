@@ -4,12 +4,11 @@
 // the link to your model provided by Teachable Machine export panel
 const URL = "https://teachablemachine.withgoogle.com/models/By6kxe40C/";
       
-let model, webcam, labelContainer, maxPredictions, startButton, stopButton;
+let model, webcam, labelContainer, maxPredictions, startButton;
 
       
 // Load the image model and setup the webcam
 startButton = document.getElementById("buttonStart");
-startButton = document.getElementById("buttonStop");
 
 
 async function init() {
@@ -32,25 +31,17 @@ async function init() {
     window.requestAnimationFrame(loop);
       
     // append elements to the DOM
-    //document.getElementById("webcam-container").appendChild(webcam.canvas);
     document.getElementById("webcam-container").replaceChild(webcam.canvas, preWebcam);
     //labelContainer = document.querySelector(".dyn-dect-bar");
     labelContainer1 = document.querySelector(".dyn-dect-bar");
     labelContainer2 = document.querySelector(".dyn-udect-bar");
-    //for (let i = 0; i < maxPredictions; i++) { // and class labels
-        //labelContainer.appendChild(document.createElement("div"));
-    //}
 }
-
-
-//var loop = setInterval(loop(), 1)
 
 async function loop() {
     webcam.update(); // update the webcam frame
     await predict();
     window.requestAnimationFrame(loop);
 }
-
       
 // run the webcam image through the image model
 async function predict() {
@@ -59,26 +50,10 @@ async function predict() {
     
     //console.log("is 1")
     const DetectclassPrediction = prediction[0].probability.toFixed(2);
-    labelContainer1.childNodes[1].innerHTML = Math.floor(DetectclassPrediction * 100) + " %";
+    labelContainer1.childNodes[1].innerHTML = Math.floor(DetectclassPrediction * 100) + "%";
 
     //console.log("is 2")
     const UndetectclassPrediction = prediction[1].probability.toFixed(2);
-    labelContainer2.childNodes[1].innerHTML = Math.floor(UndetectclassPrediction * 100) + " %";
+    labelContainer2.childNodes[1].innerHTML = Math.floor(UndetectclassPrediction * 100) + "%";
         
-    
-    //const progress = document.querySelector(".dect-score");
-    //let pro = document.querySelector(".dect-score").innerHTML;
-    //console.log(pro);
-
-    //let i = 0;
-    //const fakeUploadPerc = [0, 2, ];
-
-    //const interval = setInterval(() => {
-       // progress.style.width = pro;
-        //i++;
-        //if(progress == 100){
-            //clearInterval(interval);
-        //}
-    //}, 1);
-
 }

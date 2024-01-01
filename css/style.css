@@ -62,9 +62,13 @@ nav ul li:hover {
     margin-bottom: 5px;
 }
 
-section {
+#welcome-page {
     height: 100vh;
     position: relative;
+    background-color: rgb(66, 66, 66);
+    background-image: url(https://media.citizen.co.za/wp-content/uploads/2022/10/common-summer-skin-conditions.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 h1#name {
@@ -79,13 +83,6 @@ h2#heading {
     margin: auto;;
     text-align: center;
     font-size: 30px;
-}
-
-#welcome-page {
-    background-color: rgb(66, 66, 66);
-    background-image: url(https://media.citizen.co.za/wp-content/uploads/2022/10/common-summer-skin-conditions.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
 }
 
 a#scoll-btn {
@@ -151,11 +148,13 @@ main {
     margin-left: 15px;
     background-color: #282828;
     padding: 30px;
+    transition: all 0.3s;
 }
 
 #info main div:hover {
     box-shadow: 0 0 15px #f24755;
     background-color: #f24755;
+    transform: scale(1.05);
 }
 
 #info main div h3 {
@@ -174,8 +173,12 @@ main {
     width: 300px;
     height: 200px;
     margin: 10px;
-    display: flex;
+    display: block;
     justify-content: center;
+}
+
+#Symptoms-btn div img {
+    border-radius: 5px;
 }
 
 #Symptoms-btn {
@@ -190,8 +193,8 @@ main {
     animation-duration: 0.6s;
     animation-timing-function: ease-in-out;
     animation-delay: 0.1s;
-
 }
+
 
 #Symptoms-btn div {
     border-radius: 5px;
@@ -201,7 +204,16 @@ main {
     background-color: #f24755;
 }
 
+#Symptoms img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
 #Symptoms h4 {
+    padding-top: 10px;
+    text-align: center;
     color: white;
     font-size: 25px;
 }
@@ -232,7 +244,7 @@ main {
     margin-top: 100px;
     justify-content: space-between;
     margin-left: 30px;
-    width: 95%;
+    width: 97%;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -248,22 +260,22 @@ main {
 
 #dectected-bar {
     margin-top: 90px;
-    margin-left: 20px;
-    background-color: #282828;
-    width: 320px;
-    height: 320px;
+    margin-left: -20px;
+    background-color: white;
+    width: 350px;
+    height: 350px;
     border-radius: 10px;
 }
 
 #predict-bar-container h4 {
-    padding-top: 45px;
+    padding-top: 65px;
     text-align: center;
-    color: aliceblue;
+    color: #282828;
     font-size: 100px;
 }
 
 #dectected-bar h3 {
-    color: white;
+    color: #f24755;
     padding-top: 20px;
     margin-left: 20px;
     font-size: 30px;
@@ -278,14 +290,14 @@ main {
 #undetected-bar{
     margin-top: 90px;
     margin-left: 10px;
-    background-color: #282828;
-    width: 320px;
-    height: 320px;
+    background-color: white;
+    width: 350px;
+    height: 350px;
     border-radius: 10px;
 }
 
 #undetected-bar h3 {
-    color: white;
+    color: #f24755;
     padding-top: 20px;
     margin-left: 20px;
     font-size: 30px;
@@ -311,76 +323,76 @@ main {
 }
 
 #buttons button{
-    background-color: #df4545; /* Green */
-    color: white;
+    width: 200px;
+    height: 80px;
+    background-color: white;
+    color: #282828;
     border: none;
-    padding: 5px 32px;
+    margin-left: 100px;
+    margin-top: 30px;
     text-align: center;
     display: inline-block;
-    font-size: 16px;
+    font-size: 30px;
     border-radius: 5px;
+    transition: all 0.4s;
 }
 
 #buttons button:hover {
-    background-color: #282828;
+    color: white;
+    background-color: #f24755;
+    box-shadow: 0 0 15px #f24755;
+    transform: scale(1.1);
 }
 
-.buttonStart {
-    margin-top: 40px;
-    position: relative;
-    margin-left: 30px;
-    padding: 20px;
-}
-
-.buttonStop {
-    position: relative;
-    margin-left: 30px;
-    padding: 20px;
-}
 
 #footer {
     background-color: #df4545;
+   /* border: 2px solid #ffffff; */
+    display: flex;  
     margin-top: 300px;
-    padding-left: 350px;
-    margin-left: -400px;
-    margin-right: -400px;
-
+    margin-left: -111px; 
+    width: 1521px;
+    height: 680px;
+    justify-content: center;
 }
 
 #footer-content {
+    /*border: 2px solid red ;*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 1400px;
     height: 650px;
     position: relative;
+    
 }
 
 #contact {
-    margin-left: 200px;
+    margin-left: 100px;
     height: 400px;
     width: 300px;
 }
 
 #contact-items{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 2fr);
 
 }
 
 #contact-items ul{
     margin-top: 15px;
-    margin-left: -20px;
+    margin-left: -25px;
     list-style: none;
 }
 
 #contact-items a{
+    text-align: center;
     text-decoration: none;
     font-size: 17px;
-    color: #282828;
+    color: white;
 }
 
 #ref {
-    margin-left: -50px;
+    margin-left: 370px;
     margin-top: 100px;
     width: 300px;
     height: 400px;
@@ -402,13 +414,19 @@ main {
 #ref-container ul li a {
     text-decoration: none;
     font-size: 15px;
-    color: #282828;
+    color: white;
+}
+
+#gmail {
+    margin-left: 43px;
 }
 
 #endline {
-    margin-left: 350px;
-
-    width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -140px;
+    width: 80%;
 }
 
 #endline p {
@@ -419,5 +437,5 @@ main {
 
 #end-hr {
     margin-top: 100px;
-
 }
+
