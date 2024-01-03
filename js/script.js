@@ -10,7 +10,6 @@ let model, webcam, labelContainer, maxPredictions, startButton;
 // Load the image model and setup the webcam
 startButton = document.getElementById("buttonStart");
 
-
 async function init() {
     const modelURL = URL + "model.json";
     const metadataURL = URL + "metadata.json";
@@ -33,8 +32,10 @@ async function init() {
     // append elements to the DOM
     document.getElementById("webcam-container").replaceChild(webcam.canvas, preWebcam);
     //labelContainer = document.querySelector(".dyn-dect-bar");
-    labelContainer1 = document.querySelector(".dyn-dect-bar");
-    labelContainer2 = document.querySelector(".dyn-udect-bar");
+    detectBar = document.getElementById("dectectedBar");
+    undetectBar = document.getElementById("undectectedBar");
+    dyndetectBar = document.querySelector(".dyn-dect-bar");
+    dynundetectBar = document.querySelector(".dyn-udect-bar");
 }
 
 async function loop() {
@@ -48,12 +49,16 @@ async function predict() {
     // predict can take in an image, video or canvas html element
     const prediction = await model.predict(webcam.canvas);
     
-    //console.log("is 1")
     const DetectclassPrediction = prediction[0].probability.toFixed(2);
-    labelContainer1.childNodes[1].innerHTML = Math.floor(DetectclassPrediction * 100) + "%";
+    let detectPer = (DetectclassPrediction * 100) * 6.5;
+    let detectbarLenght = (50 + detectPer) + "px";
+    dyndetectBar.style.width = detectbarLenght;
+    dyndetectBar.childNodes[1].innerHTML = Math.ceil(DetectclassPrediction * 100) + "%";
 
-    //console.log("is 2")
     const UndetectclassPrediction = prediction[1].probability.toFixed(2);
-    labelContainer2.childNodes[1].innerHTML = Math.floor(UndetectclassPrediction * 100) + "%";
+    let undetectPer = (UndetectclassPrediction * 100) * 6.5;
+    let undetectbarLenght = (50 + undetectPer)+ "px";
+    dynundetectBar.style.width = undetectbarLenght;
+    dynundetectBar.childNodes[1].innerHTML = Math.ceil(UndetectclassPrediction * 100) + "%";
         
 }
